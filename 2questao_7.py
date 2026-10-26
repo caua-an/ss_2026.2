@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 PASTA = Path(__file__).resolve().parent
-
+PASTA_GRAFICO = PASTA / 'graficos'
 # vetor do tempo, indo de 0 a 1 com um pace de 1ms
 t = np.linspace(0,1,1001)
 
@@ -29,7 +29,7 @@ plt.ylabel('Amplitude')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig(PASTA / 'q7_entradas.png', dpi=200)
+plt.savefig(PASTA_GRAFICO/ 'q7_entradas.png', dpi=200)
 
 # plotagem do grafico dos sinais recebidos
 plt.figure(figsize=(10, 4))
@@ -41,7 +41,7 @@ plt.ylabel('Amplitude')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig(PASTA / 'q7_saidas.png', dpi=200)
+plt.savefig(PASTA_GRAFICO / 'q7_saidas.png', dpi=200)
 
 
 #plotagem dos transmitidos x recebidos
@@ -57,6 +57,6 @@ plt.ylabel('Amplitude')
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig(PASTA / 'q7_comparacao.png', dpi=200)
+plt.savefig(PASTA_GRAFICO / 'q7_comparacao.png', dpi=200)
 
 plt.show()
